@@ -12,4 +12,7 @@ RUN chown shinken.shinken /var/lib/shinken/retention.dat
 RUN chmod 660 /var/lib/shinken/retention.dat
 RUN chown shinken.shinken /var/lib/shinken -R
 
+ENV TZ=America/Recife
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 EXPOSE 80 7770
