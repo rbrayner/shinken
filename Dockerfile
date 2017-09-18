@@ -6,5 +6,6 @@ RUN pip install passlib
 RUN pip install alignak_backend_client
 RUN shinken --init
 RUN shinken install pickle-retention-file-scheduler
+RUN shinken install pickle-retention-file-generic
 
 EXPOSE 80 7770
