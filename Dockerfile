@@ -10,5 +10,6 @@ RUN shinken install pickle-retention-file-generic
 RUN touch /var/lib/shinken/retention.dat
 RUN chown shinken.shinken /var/lib/shinken/retention.dat
 RUN chmod 660 /var/lib/shinken/retention.dat
+RUN chown shinken.shinken /var/lib/shinken -R
 
 EXPOSE 80 7770
