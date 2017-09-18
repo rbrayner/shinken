@@ -7,5 +7,6 @@ RUN pip install alignak_backend_client
 RUN shinken --init
 RUN shinken install pickle-retention-file-scheduler
 RUN shinken install pickle-retention-file-generic
+RUN touch /var/lib/shinken/retention.dat
 
 EXPOSE 80 7770
