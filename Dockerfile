@@ -4,5 +4,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y vim
 
 RUN pip install passlib
 RUN pip install alignak_backend_client
+RUN shinken --init
+RUN shinken install pickle-retention-file-scheduler
 
 EXPOSE 80 7770
