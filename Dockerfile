@@ -1,10 +1,12 @@
 FROM rohit01/shinken_thruk_graphite
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y vim libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev libjansson-dev python-dev make
+RUN apt-get update && apt-get upgrade -y && apt-get install -y vim libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev libjansson-dev python-dev make libffi-dev libssl-dev
 
 RUN pip install passlib
 RUN pip install alignak_backend_client
 RUN pip install twx.botapi
+RUN pip install requests[security]
+
 RUN shinken --init
 RUN shinken install pickle-retention-file-scheduler
 RUN shinken install pickle-retention-file-generic
