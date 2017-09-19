@@ -14,6 +14,8 @@ RUN touch /var/lib/shinken/retention.dat
 RUN chown shinken.shinken /var/lib/shinken/retention.dat
 RUN chmod 660 /var/lib/shinken/retention.dat
 RUN chown shinken.shinken /var/lib/shinken -R
+RUN chown shinken.shinken /var/log/shinken -R 
+RUN chmod 777 /var/log/shinken -R
 
 ENV TZ=America/Recife
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
