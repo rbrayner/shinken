@@ -4,6 +4,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y vim libreadline-d
 
 RUN pip install passlib
 RUN pip install alignak_backend_client
+RUN pip install twx.botapi
 RUN shinken --init
 RUN shinken install pickle-retention-file-scheduler
 RUN shinken install pickle-retention-file-generic
