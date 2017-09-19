@@ -18,6 +18,6 @@ RUN chown shinken.shinken /var/lib/shinken -R
 ENV TZ=America/Recife
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-COPY shinken_apache.conf /etc/apache2/conf.d/
+#COPY shinken_apache.conf /etc/apache2/conf.d/
 
 EXPOSE 80 7770
