@@ -1,6 +1,6 @@
 FROM rohit01/shinken_thruk_graphite
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y vim libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev libjansson-dev python-dev make libffi-dev libssl-dev python-mysqldb libfilesys-smbclient-perl
+RUN apt-get update && apt-get upgrade -y && apt-get install -y vim libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev libjansson-dev python-dev make libffi-dev libssl-dev python-mysqldb libfilesys-smbclient-perl bc
 
 RUN pip install passlib
 RUN pip install alignak_backend_client
